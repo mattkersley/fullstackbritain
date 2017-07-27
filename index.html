@@ -5,14 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Full Stack Britain</title>
   <style>
-    html { text-align: center; }
+    html {
+      background: linear-gradient(#efefef, #cccccf);
+      text-align: center;
+    }
 
     body {
-      display: flex;
       align-items: center;
-      justify-content: center;
+      color: #333;
+      display: flex;
       font-size: 1.5em;
       font-family: sans-serif;
+      justify-content: center;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    .slacklogo {
+      position: absolute;
+      margin-left: -55px;
+      margin-top: 50px;
+      z-index: 1;
     }
 
     .icon {
@@ -44,14 +56,35 @@
       box-shadow: 0 2px 0 0 #995f21;
       transform: translateY(8px)
     }
+
+    .get-kraken {
+      bottom: 5px;
+      color: #d93d3d;
+      display: inline-block;
+      font-size: 0.6em;
+      opacity: .5;
+      position: absolute;
+      right: 5px;
+      text-align: center;
+      text-decoration: none;
+      transition: opacity .3s ease-in-out;
+    }
+    .get-kraken:hover {
+      opacity: 1;
+    }
+    .get-kraken img { vertical-align: middle; }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <span class="icon">🥞</span>
+    <span class="icon">🥞</span><img class="slacklogo" src="Slack_Mark.svg" width="96px">
     <h1>Full Stack Britain</h1>
-    <h2><em>The</em> Web Industry Slack Community</h2>
+    <h2><em>The</em> Web Industry Community</h2>
     <p><a href="https://join.slack.com/t/fullstackbritain/shared_invite/MjE2NzUzNTEyNTk1LTE1MDA5MDgxODYtZjI1MTE5YTgwZQ" class="button">Take a bite!</a></p>
   </div>
+  <a href="http://getkraken.co" class="get-kraken">
+    Started by<br>
+    <img src="http://getkraken.co/branding/logo.svg" width="56px">
+  </a>
 </body>
 </html>
