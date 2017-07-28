@@ -5,19 +5,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Full Stack Britain</title>
   <style>
-    html {
-      background: linear-gradient(#efefef, #cccccf);
-      text-align: center;
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      align-items: center;
       color: #333;
-      display: flex;
       font-size: 1.5em;
       font-family: sans-serif;
-      justify-content: center;
+      line-height: 1.75em;
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    h1, h2, h3 {
+      margin-top: 2em;
+    }
+
+    h2 {
+      font-family: monospace;
+      margin-bottom: 1.5em;
+    }
+
+    h3 {
+      font-family: monospace;
+    }
+
+    a { color: #995f21; text-decoration: none; }
+
+    .wrapper {
+      align-items: center;
+      background: linear-gradient(#efefef, #cccccf);
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      width: 100vw;
     }
 
     .slacklogo {
@@ -33,11 +60,6 @@
       line-height: 1;
       margin-bottom: -0.2em;
       transform: scale(.8);
-    }
-
-    h2 {
-      font-family: monospace;
-      margin-bottom: 1.5em;
     }
 
     .button {
@@ -58,14 +80,24 @@
       transform: translateY(8px)
     }
 
+    .content {
+      margin: 40px auto;
+      max-width: 1024px;
+      padding: 20px;
+      text-align: left;
+    }
+    @media screen and (min-width: 768px){
+      .content { padding: 40px; }
+    }
+
     .get-kraken {
-      bottom: 5px;
+      bottom: 10px;
       color: #d93d3d;
       display: inline-block;
       font-size: 0.6em;
       opacity: .5;
       position: absolute;
-      right: 5px;
+      right: 10px;
       text-align: center;
       text-decoration: none;
       transition: opacity .3s ease-in-out;
@@ -74,18 +106,112 @@
       opacity: 1;
     }
     .get-kraken img { vertical-align: middle; }
+
+    .admins {margin-top:2.5em;}
+
+    .channels {
+      padding:0;
+      word-spacing: -0.3em;
+    }
+    .channels li {
+      background: url('Slack_Mark.svg') no-repeat left center;
+      background-size: 1.5em;
+      display: inline-block;
+      padding: 0px 10px;
+      text-indent: 1.25em;
+      width: 100%;
+      word-spacing: normal;
+    }
+    @media screen and (min-width: 640px){
+      .channels li { width: 50%; }
+    }
+    @media screen and (min-width: 768px){
+      .channels li { width: 33.333%; }
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <span class="icon">🥞</span><img class="slacklogo" src="Slack_Mark.svg" width="96px">
-    <h1>Full Stack Britain</h1>
-    <h2><em>The</em> Web Industry Community</h2>
-    <p><a href="https://join.slack.com/t/fullstackbritain/shared_invite/MjE2NzUzNTEyNTk1LTE1MDA5MDgxODYtZjI1MTE5YTgwZQ" class="button">Take a bite!</a></p>
+    <div>
+      <span class="icon">🥞</span><img class="slacklogo" src="Slack_Mark.svg" width="96px">
+      <h1>Full Stack Britain</h1>
+      <h2><em>The</em> Web Industry Community</h2>
+      <p><a href="https://join.slack.com/t/fullstackbritain/shared_invite/MjE2NzUzNTEyNTk1LTE1MDA5MDgxODYtZjI1MTE5YTgwZQ" class="button">Take a bite!</a></p>
+      <a href="http://getkraken.co" class="get-kraken">
+        Started by<br>
+        <img src="http://getkraken.co/branding/logo.svg" width="56px">
+      </a>
+    </div>
   </div>
-  <a href="http://getkraken.co" class="get-kraken">
-    Started by<br>
-    <img src="http://getkraken.co/branding/logo.svg" width="56px">
-  </a>
+
+  <div class="content">
+    <h2>What is Full Stack Britain?</h2>
+    <p>We're a curated community of web professionals.<br>See the channel list below for what sort of topics we cover.</p>
+    <p>If you think we're missing a channel or topic, join up and let us know in #requests</p>
+    <ul class="channels">
+      <li>cms-drupal</li>
+      <li>cms-joomla</li>
+      <li>cms-wordpress</li>
+      <li>general</li>
+      <li>jobboard</li>
+      <li>lang-css</li>
+      <li>lang-html</li>
+      <li>lang-js</li>
+      <li>lang-php</li>
+      <li>lang-ruby</li>
+      <li>people-agencies</li>
+      <li>people-copywriters</li>
+      <li>people-designers</li>
+      <li>people-developers</li>
+      <li>people-freelancers</li>
+      <li>people-photographers</li>
+      <li>people-server-admins</li>
+      <li>people-ux</li>
+      <li>random</li>
+      <li>requests</li>
+    </ul>
+    <p class="admins"><strong>Community Admins:</strong> @Matt, @Alex</p>
+  </div>
+
+  <hr>
+
+  <div class="content">
+    <h2>Code of Conduct</h2>
+    <h3><abbr title="Too long; Didn't read">TL;DR</abbr></h3>
+    <p><a href="#kind">Be kind</a>. <a href="#helpful">Be helpful</a>. <a href="#respectful">Be respectful</a>. <a href="#careful">Be careful</a>.</p>
+    <p>Anything considered hurtful, abusive or disrespectful will not be tollerated and action will be taken by a community admin.</p>
+    <h3 id="kind">Be Kind.</h3>
+    <p>
+      Our aim is to provide a polite and considerate community.<br>
+      This means we need everyone to treat others as they wish to be treated (unless you're into being treated badly, you filthy animal).<br>
+      Basically, this means don't be abusive in any fashion.
+    </p>
+    <h3 id="helpful">Be Helpful.</h3>
+    <p>Being helpful can be, but is not limited to:</p>
+      <ul>
+        <li>Offering constructive criticism – only when aked, and always back up opinion with reasoning</li>
+        <li>Offering solutions to a problem – sharing is caring</li>
+        <li>Being vigilent against bullying and reporting it to an admin</li>
+        <li>Make suggestions that benefit the direction of the community</li>
+      </ul>
+    <h3 id="respectful">Be Respectful.</h3>
+    <p>Admins <strong>will not</strong> tollerate disrespectful behaviour.</p>
+    <ul>
+      <li>No abusive language</li>
+      <li>No sexist comments</li>
+      <li>No racism</li>
+      <li>No targetted ill-will (bullying)</li>
+    </ul>
+    <p>If someone is bothering you, ask politely for them to stop. If they continue, notify an admin and it will be dealt with impartially, please respect the admin's decision.</p>
+    <h3 id="careful">Be Careful.</h3>
+    <p>Don't give out <em>any</em> personal or financial information to strangers. Use your common sense.</p>
+    <p>It's easy to become "familiar" with people through online conversation, but remember, you may not know the person you're talking to.</p>
+    <p>If you want to talk business with someone and trade services, do so in a private channel or DM.</p>
+    <h3>Disclaimer</h3>
+    <p>
+      We cannot be held responsible for any legal, or financial misgivings you may encounter through this community.<br>
+      You are responsible for your business, and while we encourage sharing of knowledge, ideas and contacts, we don't accept or recognise responsibility for your actions in the community outside of the above guidelines.
+    </p>
+  </div>
 </body>
 </html>
